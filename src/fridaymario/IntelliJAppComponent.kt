@@ -30,7 +30,7 @@ class IntelliJAppComponent: AppLifecycleListener {
 
     override fun appWillBeClosed(isRestart: Boolean) {
         if (!Settings.getInstance().isPluginEnabled) return
-        if (soundPlayer != null && Settings.getInstance().backgroundMusicEnabled) {
+        if (soundPlayer != null) {
             soundPlayer!!.stopAndPlayGameOver()
         }
     }
